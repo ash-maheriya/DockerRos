@@ -1,0 +1,13 @@
+#tensorflow-gpu
+numpy
+scipy
+scikit-learn
+#opencv-python
+h5py
+matplotlib
+Pillow
+requests
+psutil
+flask
+flask-httpauth
+six
