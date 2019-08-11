@@ -1,8 +1,8 @@
 #tensorflow-gpu
 numpy
-scipy
+#scipy
 scikit-learn
-#opencv-python
+opencv-python
 h5py
 matplotlib
 Pillow
