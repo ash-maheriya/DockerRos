@@ -32,8 +32,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 RUN export DEBIAN_FRONTEND=noninteractive && apt-get install -y ros-melodic-joy 
 RUN export DEBIAN_FRONTEND=noninteractive \
         && apt-get install -y arduino \
-        && apt-get install -y ros-melodic-joy \
-        && apt-get install -y python-rosinstall python-rosinstall-generator python-wstool build-essential \
+        && apt-get install -y python-rosinstall python-rosinstall-generator python-wstool \
         && apt-get install -y ros-melodic-rosserial-arduino ros-melodic-rosserial ros-melodic-angles
 
 
