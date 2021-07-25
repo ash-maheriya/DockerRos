@@ -1,0 +1,11 @@
+#!/bin/bash
+
+ros_distro=melodic
+
+dcr_name="ros/${ros_distro}-perceptive-robot"
+DOCKER_BUILDKIT=1 docker build \
+    --build-arg user=$USER  \
+    --build-arg ROS_DISTRO=${ros_distro}  \
+    --build-arg UBUNTU_DISTRO=bionic  \
+    -t $dcr_name .
+
