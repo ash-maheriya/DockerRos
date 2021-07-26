@@ -89,6 +89,7 @@ RUN apt-get update && apt-get install -y -q --no-install-recommends \
         libgtk2.0-dev \
         libgtkglext1-dev \
         libgtkglextmm-x11-1.2-dev \
+        libglew-dev \
         libgles2-mesa-dev \
         mesa-utils \
         libglvnd-dev \
@@ -150,7 +151,7 @@ RUN apt-get update && apt-get install -y -q --no-install-recommends \
 # Setup keys
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
 
-# ROS packages
+# ROS core (if this fails, not point going forward, hence separated from rest of ROS installation)
 RUN echo "deb http://packages.ros.org/ros/ubuntu ${UBUNTU_DISTRO} main" > /etc/apt/sources.list.d/ros1-latest.list && \
     echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> /home/${user}/.bashrc && \
     apt-get update && \
@@ -165,6 +166,7 @@ RUN apt-get update && \
         ros-${ROS_DISTRO}-desktop-full \
         ros-${ROS_DISTRO}-robot \
         ros-${ROS_DISTRO}-joy \
+        ros-${ROS_DISTRO}-vision-msgs \
         ros-${ROS_DISTRO}-opencv-apps && \
     apt-get install -q -y --no-install-recommends \
         arduino \
