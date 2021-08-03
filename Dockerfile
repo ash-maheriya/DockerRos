@@ -1,3 +1,4 @@
+# syntax=docker/dockerfile:experimental
 FROM nvcr.io/nvidia/l4t-base:r32.5.0
 
 ENV TZ 'America/Los_Angeles'
