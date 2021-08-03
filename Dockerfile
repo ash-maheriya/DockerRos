@@ -54,6 +54,7 @@ RUN apt-get update && apt-get install -y -q --no-install-recommends \
         pkg-config \
         yasm \
         git \
+        gdb \
         vim \
         curl \
         usbutils \
@@ -144,6 +145,8 @@ RUN apt-get update && apt-get install -y -q --no-install-recommends \
         python-h5py \
         libxml2-dev \
         libxslt1-dev \
+            \
+        xterm \
         && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
@@ -192,6 +195,7 @@ RUN python -m pip install -U \
     python -m pip install \
         Cython && \
     python -m pip install \
+        pypcd \
         numpy \
         matplotlib \
         Pillow \
